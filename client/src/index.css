@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.flex-container{
+  display: flex !important;
+}
+h1{
+  font-size: 20px !important;
+}
+.btn{
+  background-color: red !important;
+  color: white !important;
+}
+.plus{
+  color: green;
+  text-decoration: none;
+  font-weight: bolder;
+}
+.minus{
+  color: red;
+  text-decoration: none;
+  font-weight: bolder;
+}
+input{
+  margin-top: 10px !important;
+  box-shadow: none !important;
+}
+@font-face {
+  font-family: 'Chelsea';
+  src: url('C:\Users\aryan\OneDrive\Desktop\reservation\client\fonts\Chelsea.ttf') format('truetype');
+}
+.custom-font {
+  font-family: 'Chelsea', sans-serif; /* Use the custom font */
+}
+select{
+  box-shadow: none !important;
+  border-color: black !important;
+}
