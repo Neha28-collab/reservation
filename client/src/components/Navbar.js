@@ -3,24 +3,24 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { useSelector, useDispatch } from "react-redux";
-import {logoutUser} from "../actions/userActions"
+import {logoutUser} from "../actions/userActions";
+import './nav.css';
+
 export default function NavBar() {
   const cartstate = useSelector((state) => state.cartReducer);
   const userstate = useSelector((state) => state.loginUserReducer);
   const { currentUser } = userstate;
   const dispatch = useDispatch();
 
+  const isAdmin = currentUser && currentUser.isAdmin; // Assuming currentUser exists
+
   return (
     <div>
-      <Navbar
-        bg="dark"
-        data-bs-theme="dark"
-        className="shadow-lg p-3 bg-body w-100"
-      >
+      <Navbar bg="dark" data-bs-theme="dark" className="shadow-lg p-3 bg-body w-100">
         <Container>
           <Navbar.Brand href="/"><h1 className="custom-font">Reactaurant</h1></Navbar.Brand>
           <Nav className="ml-auto">
-            <div className="d-flex align-items-center">
+          <div className="d-flex align-items-center">
               {currentUser ? (
                 <div className="dropdown">
                   <a
@@ -54,7 +54,7 @@ export default function NavBar() {
               <a href="/food" className="nav-link">
                 Menu
               </a>
-              <a href="#pricing" className="nav-link">
+              <a href="/table" className="nav-link">
                 Book Table
               </a>
               <a href="/about" className="nav-link">
@@ -64,6 +64,11 @@ export default function NavBar() {
                 <b>Cart: {cartstate.cartItems.length}</b>
               </a>
             </div>
+            {isAdmin && (
+              <a href="/add" className="nav-link">
+                Add Items
+              </a>
+            )}
           </Nav>
         </Container>
       </Navbar>

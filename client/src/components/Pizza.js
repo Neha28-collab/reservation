@@ -1,16 +1,28 @@
 import React,{useState} from 'react';
 import { useDispatch,useSelector } from 'react-redux';
 import { addToCart } from '../actions/cartActions';
+import { editPizza, removePizza } from '../actions/pizzaActions';
+import { useNavigate } from 'react-router-dom';
 
 export default function Pizza({pizza}) {
     const [quantity,setquantity]=useState(1)
     const [varient,setvarient]=useState('small')
+    const userstate = useSelector((state) => state.loginUserReducer);
+    const { currentUser } = userstate;
+    const isAdmin = currentUser && currentUser.isAdmin;
+    const navigate = useNavigate();
 
     const dispatch = useDispatch();
     function addtocart(){
         dispatch(addToCart(pizza,quantity,varient))
     }
-
+    function handleRemovePizza(pizzaId) {
+        dispatch(removePizza(pizzaId));
+    }
+    function handleEditPizza(pizzaId) {
+        navigate.push(`/edit/${pizzaId}`);
+      }
+    
   return (
     <div className='shadow-lg p-3 mb-5 bg-white rounded text-center'>
         <h1>
@@ -42,7 +54,14 @@ export default function Pizza({pizza}) {
             <div className='m-1 w-100'>
                 <button className='btn' onClick={addtocart}> ADD TO CART</button>
             </div>
+            {isAdmin && (
+              <a href="" className="nav-link m-2" onClick={() => handleRemovePizza(pizza._id)}>
+                <img src='https://cdn-icons-png.flaticon.com/128/6861/6861362.png' style={{height:'25px'}}/> <button onClick={() => handleEditPizza(pizza._id)}>Edit</button>
+              </a>
+              
+            )}
         </div>
     </div>
   )
 }
+

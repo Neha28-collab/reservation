@@ -15,6 +15,11 @@ import Ordersscreens from './screens/Ordersscreens';
 import LandingPage from './screens/LandingPage';
 import CustomerReview from './screens/CustomerReview';
 import Footer from './components/footer';
+import AddItem from './screens/addItem';
+import ReservationForm from './screens/ReservationForm';
+
+
+
 
 function App() {
   return (
@@ -29,6 +34,9 @@ function App() {
       <Route path='/register' exact Component={RegisterScreen} />
       <Route path='/login' exact Component={LoginScreen} />
       <Route path='/orders' exact Component={Ordersscreens} />
+      <Route path='/add' exact Component={AddItem} />
+      <Route path='/table' exact Component={ReservationForm} />
+
       </Routes>
       </Router>
       <Footer />
