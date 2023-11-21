@@ -3,8 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { useSelector, useDispatch } from "react-redux";
-import {logoutUser} from "../actions/userActions";
-import './nav.css';
+import { logoutUser } from "../actions/userActions";
 
 export default function NavBar() {
   const cartstate = useSelector((state) => state.cartReducer);
@@ -12,15 +11,18 @@ export default function NavBar() {
   const { currentUser } = userstate;
   const dispatch = useDispatch();
 
-  const isAdmin = currentUser && currentUser.isAdmin; // Assuming currentUser exists
+  const isAdmin = currentUser && currentUser.isAdmin;
 
   return (
-    <div>
-      <Navbar bg="dark" data-bs-theme="dark" className="shadow-lg p-3 bg-body w-100">
-        <Container>
-          <Navbar.Brand href="/"><h1 className="custom-font">Reactaurant</h1></Navbar.Brand>
-          <Nav className="ml-auto">
-          <div className="d-flex align-items-center">
+    <Navbar bg="dark" variant="dark" expand="lg">
+      <Container>
+        <Navbar.Brand href="/">
+          <h1 className="custom-font">Reactaurant</h1>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            <div className="d-flex align-items-center">
               {currentUser ? (
                 <div className="dropdown">
                   <a
@@ -35,13 +37,14 @@ export default function NavBar() {
 
                   <ul className="dropdown-menu">
                     <li>
-                      <a className="dropdown-item" href="/orders">
-                        Orders
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#" onClick={()=>{dispatch(logoutUser())}}>
-                        <li>Logout</li>
+                      <a
+                        className="dropdown-item"
+                        href="#"
+                        onClick={() => {
+                          dispatch(logoutUser());
+                        }}
+                      >
+                        Logout
                       </a>
                     </li>
                   </ul>
@@ -70,8 +73,8 @@ export default function NavBar() {
               </a>
             )}
           </Nav>
-        </Container>
-      </Navbar>
-    </div>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }

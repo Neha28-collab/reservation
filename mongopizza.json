@@ -1,73 +1,82 @@
 [
-    {
-      "name": "PEPPER BARBEQUE CHICKEN",
-      "varients": ["small", "medium", "large"],
-      "prices": [
-        {
-          "small": 200,
-          "medium": 350,
-          "large": 400
-        }
-      ],
-      "category": "non-veg",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Pizza-3007395.jpg/800px-Pizza-3007395.jpg",
-      "description": "pepper barbeque chicken"
-    },
-    {
-      "name": "PANEER PIZZA",
-      "varients": ["small", "medium", "large"],
-      "prices": [
-        {
-          "small": 200,
-          "medium": 350,
-          "large": 400
-        }
-      ],
-      "category": "veg",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Pizza-3007395.jpg/800px-Pizza-3007395.jpg",
-      "description": "PANEER PIZZA"
-    },
-    {
-      "name": "CHICKEN DOMINATOR",
-      "varients": ["small", "medium", "large"],
-      "prices": [
-        {
-          "small": 200,
-          "medium": 350,
-          "large": 400
-        }
-      ],
-      "category": "non-veg",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Pizza-3007395.jpg/800px-Pizza-3007395.jpg",
-      "description": "chicken dominator"
-    },
-    {
-      "name": "FARMHOUSE",
-      "varients": ["small", "medium", "large"],
-      "prices": [
-        {
-          "small": 200,
-          "medium": 350,
-          "large": 400
-        }
-      ],
-      "category": "veg",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Pizza-3007395.jpg/800px-Pizza-3007395.jpg",
-      "description": "all vegetables"
-    },
-    {
-      "name": "PASTA PIZZA",
-      "varients": ["small", "medium", "large"],
-      "prices": [
-        {
-          "small": 200,
-          "medium": 350,
-          "large": 400
-        }
-      ],
-      "category": "non-veg",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Pizza-3007395.jpg/800px-Pizza-3007395.jpg",
-      "description": "PASTA AND CHICKEN"
-    }
-  ]
-  
+  {
+    "name": "MARGHERITA PIZZA",
+    "varients": ["small", "medium", "large"],
+    "prices": [
+      {
+        "small": 180,
+        "medium": 320,
+        "large": 380
+      }
+    ],
+    "category": "veg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Pizza-3007395.jpg/800px-Pizza-3007395.jpg",
+    "description": "Classic Italian pizza with cheese and tomato sauce"
+  },
+  {
+    "name": "TANDOORI CHICKEN PIZZA",
+    "varients": ["small", "medium", "large"],
+    "prices": [
+      {
+        "small": 220,
+        "medium": 370,
+        "large": 420
+      }
+    ],
+    "category": "non-veg",
+    "image": "https://unsplash.com/photos/round-pizza-UxRhrU8fPHQ",
+    "description": "Pizza topped with tandoori chicken and spices"
+  },
+  {
+    "name": "MASALA DOSA",
+    "varients": ["normal", "special"],
+    "prices": [
+      {
+        "normal": 100,
+        "special": 150
+      }
+    ],
+    "category": "veg",
+    "image": "https://unsplash.com/photos/a-plate-of-food-5oF7d_hPJG4",
+    "description": "South Indian crispy pancake filled with spiced potatoes"
+  },
+  {
+    "name": "BUTTER CHICKEN",
+    "varients": ["full", "half"],
+    "prices": [
+      {
+        "full": 250,
+        "half": 150
+      }
+    ],
+    "category": "non-veg",
+    "image": "https://unsplash.com/photos/green-vegetable-on-white-ceramic-plate-PqsImnjuElM",
+    "description": "Tender chicken cooked in a creamy tomato sauce"
+  },
+  {
+    "name": "SAMOSA",
+    "varients": ["small", "large"],
+    "prices": [
+      {
+        "small": 20,
+        "large": 40
+      }
+    ],
+    "category": "veg",
+    "image": "https://unsplash.com/photos/white-ceramic-bowl-beside-brown-bread-on-green-ceramic-plate-24badwxiiIw",
+    "description": "Deep-fried pastry filled with spiced potatoes and peas"
+  },
+  {
+    "name": "BIRYANI",
+    "varients": ["chicken", "vegetable"],
+    "prices": [
+      {
+        "chicken": 220,
+        "vegetable": 180
+      }
+    ],
+    "category": "non-veg",
+    "image": "https://unsplash.com/photos/cooked-food-on-white-ceramic-plate-0j4bisyPo3M",
+    "description": "Flavorful rice dish cooked with spices and chicken or vegetables"
+  }
+]

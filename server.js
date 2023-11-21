@@ -30,7 +30,25 @@ const Reservation = mongoose.model('Reservation', {
   });
   app.use(bodyParser.json());
   
-
+  app.post('/api/reservations', async (req, res) => {
+    try {
+      const { name, date, time, numberOfPeople } = req.body;
+  
+      const reservation = new Reservation({
+        name,
+        date,
+        time,
+        numberOfPeople,
+      });
+  
+      await reservation.save();
+  
+      res.status(201).json({ message: 'Reservation created successfully' });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Internal Server Error' });
+    }
+  });
 
 // Route to get all pizzas
 app.get("/getpizza", async (req, res) => {
@@ -51,9 +69,8 @@ app.post("/booking", async (req, res) => {
         time: req.body.time
     };
 
-    // Process the received data
+
     try {
-        // Assuming 'collection' here is a placeholder for your MongoDB collection
         await collection.insertOne(data); // Adjust this to match your database logic
         res.status(200).json({ message: 'Table booked successfully', data });
     } catch (error) {

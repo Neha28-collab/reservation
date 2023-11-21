@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: Dosis;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -36,7 +36,11 @@ input{
 }
 @font-face {
   font-family: 'Chelsea';
-  src: url('C:\Users\aryan\OneDrive\Desktop\reservation\client\fonts\Chelsea.ttf') format('truetype');
+  src: url('../fonts/Chelsea.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Dosis';
+  src: url('../fonts/Dosis.ttf') format('truetype');
 }
 .custom-font {
   font-family: 'Chelsea', sans-serif; /* Use the custom font */
@@ -44,4 +48,9 @@ input{
 select{
   box-shadow: none !important;
   border-color: black !important;
+}
+.yes{
+  font-family: Chelsea !important;
+  font-size: 40px !important;
+  text-align: center !important;
 }

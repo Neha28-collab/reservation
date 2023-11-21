@@ -56,7 +56,7 @@ export default function Pizza({pizza}) {
             </div>
             {isAdmin && (
               <a href="" className="nav-link m-2" onClick={() => handleRemovePizza(pizza._id)}>
-                <img src='https://cdn-icons-png.flaticon.com/128/6861/6861362.png' style={{height:'25px'}}/> <button onClick={() => handleEditPizza(pizza._id)}>Edit</button>
+                <img src='https://cdn-icons-png.flaticon.com/128/6861/6861362.png' style={{height:'25px'}}/>
               </a>
               
             )}
